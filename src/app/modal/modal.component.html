@@ -1,0 +1,84 @@
+<div class="modal-overlay" *ngIf="isOpen" (click)="close()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+            <h2>Dodaj korisnika</h2>
+            <button (click)="close()">Close</button>
+            <div class="column">
+                <label><span>Ime</span> <span>*</span>
+                    <input type="text" class="data" id="name" [(ngModel)]="name"/>
+                </label>
+                <label><span>Prezime</span> <span>*</span>
+                    <input type="text" class="data" id="surname" [(ngModel)]="surname"/>
+                </label>
+                <label><span>Spol</span> <span>*</span>
+                    <select>
+                        <option>Muško</option>
+                        <option>Žensko</option>
+                    </select>
+                </label>
+                <label><span>Radno mjesto</span> <span>*</span>
+                    <input type="text" class="data" id="workplace" [(ngModel)]="workplace"/>
+                </label>
+                <label><span>Bilješke</span>
+                    <textarea></textarea>
+                </label>
+            </div>
+
+            <div class="column">
+                <label><span>Email</span> <span>*</span>
+                    <input type="text" placeholder="example@example.com" class="data" id="email" [(ngModel)]="email"/>
+                </label>
+                <label><span>Telefon</span>
+                    <input type="text" placeholder="+3851 23456789" class="data" id="phone_number" [(ngModel)]="phone_number"/>
+                </label>
+                <label><span>Država</span> <span>*</span>
+                    <select [(ngModel)]="country">
+                        <option>Bosna i Hercegovina</option>
+                        <option>Crna Gora</option>
+                        <option>Hrvatska</option>
+                        <option>Srbija</option>
+                    </select>
+                </label>
+                <label><span>Grad</span> <span>*</span>
+                    <select [(ngModel)]="city">
+                        <option>Zagreb</option>
+                        <option>Rijeka</option>
+                        <option>Osijek</option>
+                        <option>Split</option>
+                    </select>
+                </label>
+                <label><span>Adresa</span>
+                    <input type="text" class="data" id="address" [(ngModel)]="address"/>
+                </label>
+            </div>
+
+            <div class="column">
+                <label>
+                    <div>
+                        <span>Korisničko ime</span> <span>*</span>
+                    </div>
+                    <input type="text" class="data" id="username" [(ngModel)]="username"/>
+                </label>
+                <label>
+                    <div>
+                        <span>Nova lozinka</span> <span>*</span>
+                    </div>
+                    <input type="password" class="data" id="password" [(ngModel)]="password"/>
+                </label>
+                <label>
+                    <div>
+                        <span>Potvrdi lozinku</span> <span>*</span>
+                    </div>
+                    <input type="password" class="data" id="password_confirm" [(ngModel)]="password_confirm" />
+                </label>
+                <label>
+                    <div>
+                        <span>Role</span> <span>*</span>
+                    </div>
+                    <input type="checkbox" value="Administrator" [(ngModel)]="role"/> Administrator
+                    <input type="checkbox" value="User" [(ngModel)]="role"/> User
+                </label>
+            </div>
+            <button>Otkaži</button>
+            <input type="submit" value="Spremi" (click)="submit()"/>
+    </div>
+</div>

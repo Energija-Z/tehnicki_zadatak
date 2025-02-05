@@ -1,0 +1,25 @@
+.modal-overlay {
+    width: 600px;
+    border: 1px solid grey;
+}
+
+.column {
+    width: calc((100% - 1em) / 3);
+    margin: 0 1em;
+    float: left;
+    display: flex;
+}
+
+.column label, .column input, .column select, .column textarea {
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+.column input, .column select {
+    background-color: white;
+}
+
+.column label span + span {
+    color: red;
+}

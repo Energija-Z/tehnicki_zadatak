@@ -1,0 +1,53 @@
+main {
+    background: rgb(41, 41, 41);
+    padding: calc(25% - 169px); /* height of element */
+}
+
+#login {
+    background: black;
+    margin: auto;
+    text-align: center;
+    width: 300px;
+    padding: 1em 0.75em;
+    font-family: "Helvetica";
+
+}
+
+h1 {
+    font: 1em Helvetica, sans-serif;
+    color: white;
+    text-align: initial;
+    margin-left: 1em;
+    font-size: 0.75em;
+    margin-bottom: 1em;
+}
+
+h1 span {
+    font-size: 75%;
+}
+
+input {
+    width: calc(100% - 2em);
+    height: 1.5em;
+    margin-bottom: 1em;
+}
+
+input[type="submit"] {
+    background-color: #3ba43b;
+    color: white;
+    border-radius: 4px;
+    margin-top: 1em;
+    height: 2em;
+    border: 0;
+}
+
+div > div {
+    text-align: right;
+}
+
+a {
+    color: lightgrey;
+    font-size: 0.75em;
+    margin-right: 1em;
+    text-decoration: none;
+}
